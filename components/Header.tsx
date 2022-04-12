@@ -2,13 +2,15 @@ import Nav from './Nav'
 
 const Header = () => {
   return (
-    <div className="header-section mx-20 flex flex-col justify-between ">
+    // Contains global css
+    <div className="header-section flex flex-col justify-between pl-20 ">
       <Nav />
       <div className="flex h-full flex-row">
-        <div className="header-name flex w-2/3 items-end pb-11 text-9xl font-bold">
+        {/* Contains global css */}
+        <div className="header-name flex w-3/5 items-end pb-11 font-bold leading-none">
           Callum Byrne
         </div>
-        <div className="flex w-1/3 flex-col justify-between  py-16 text-2xl">
+        <div className="flex w-2/5 flex-col justify-between  py-16 px-20 text-2xl">
           <p className="flex justify-end">Melbourne - Australia</p>
           <div>
             <p className="flex justify-end">Full Stack Developer</p>

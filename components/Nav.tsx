@@ -4,7 +4,7 @@ import logo from '../public/logo.png'
 
 const Nav = () => {
   return (
-    <div className="flex justify-between py-8">
+    <div className="flex justify-between py-8 pr-20">
       <div>
         <Link href="/" passHref>
           <a className="flex items-center">
