@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.header {
+html {
+  background-color: #f8f8f8;
+}
+
+.header-section {
   height: 600px;
 }
 
-html {
-  background-color: #f8f8f8;
+.header-name {
+  font-size: 190px;
+}
+
+.about-section {
+  height: 695px;
+  background-color: #0657a2;
 }
