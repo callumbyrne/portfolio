@@ -25,6 +25,7 @@ const About = () => {
         <Image
           src={mtb}
           alt="mtb"
+          layout="fixed"
           height={695}
           objectFit="cover"
           objectPosition="right"
