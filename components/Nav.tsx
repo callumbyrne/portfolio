@@ -5,11 +5,17 @@ import MenuIcon from './MenuIcon'
 
 const Nav = () => {
   return (
-    <nav className="mx-7 my-10 flex items-center justify-between">
-      <div>
+    <nav className="my-10 flex items-center justify-between px-7">
+      <div className="flex md:inline-flex">
         <Link href="/" passHref>
           <a className="flex items-center">
-            <Image src={logo} alt="logo" />
+            <Image
+              src={logo}
+              alt="logo"
+              height={28}
+              objectFit="scale-down"
+              objectPosition={'left'}
+            />
           </a>
         </Link>
       </div>

@@ -3,10 +3,12 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div className="about-section flex flex-row justify-between pl-20">
-      <div className="flex w-3/5 flex-col justify-end pb-28 pr-20 text-white">
-        <h2 className="pb-8 text-8xl font-bold">About me</h2>
-        <p className="pb-8 text-2xl">
+    <section className="about-section flex flex-col justify-between rounded-t-3xl">
+      <div className="flex flex-col justify-end px-7 py-7 text-white md:w-3/5">
+        <h2 className="pb-7 text-8xl font-bold">
+          About me<span className="text-red-500">.</span>
+        </h2>
+        <p className="pb-7 text-2xl">
           I am a full stack developer from Melbourne with a passion for both
           front and back-end development and the technologies and problem
           solving they involve. I have a bachelor’s degree in Civil Engineering,
@@ -21,17 +23,10 @@ const About = () => {
           mountain bike.
         </p>
       </div>
-      <div className="flex w-2/5">
-        <Image
-          src={mtb}
-          alt="mtb"
-          layout="fixed"
-          height={695}
-          objectFit="cover"
-          objectPosition="right"
-        />
+      <div className="flex h-full md:w-2/5">
+        <Image src={mtb} alt="mtb" objectFit="cover" objectPosition="right" />
       </div>
-    </div>
+    </section>
   )
 }
 
