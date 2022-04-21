@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <section className="flex w-full flex-col justify-between">
       <Nav />
-      <div className="flex flex-col px-7 pb-16">
+      <div className="flex flex-col px-4 pb-16">
         <div className="flex flex-col pb-11 text-6xl font-bold lg:w-3/5">
           {/* <h2 className="-mb-3">Callum</h2>
           <h2>Byrne</h2> */}
@@ -17,12 +17,12 @@ const Header = () => {
           {/* <p className="flex md:justify-end">Melbourne - Australia</p> */}
           <div>
             {/* <p className="flex md:justify-end">Full Stack Developer</p> */}
-            <p className="flex italic md:justify-end md:text-right">
+            <p className="flex justify-end text-right italic">
               HTML, CSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS,
               Express, MongoDB, Jest, Cypress
             </p>
           </div>
-          <p className="flex md:justify-end">callumjbyrne97@gmail.com</p>
+          <p className="flex justify-end">callumjbyrne97@gmail.com</p>
         </div>
       </div>
     </section>
