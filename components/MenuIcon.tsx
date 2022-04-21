@@ -3,14 +3,14 @@ const MenuIcon = () => (
     <path
       fill="transparent"
       strokeWidth="2"
-      stroke="rgba(239, 68, 68)"
+      stroke="#0657a2"
       strokeLinecap="butt"
       d="M 0 2.5 L 20 2.5"
     ></path>
     <path
       fill="transparent"
       strokeWidth="2"
-      stroke="rgba(239, 68, 68)"
+      stroke="#0657a2"
       strokeLinecap="butt"
       d="M 10 9.423 L 20 9.423"
       opacity="1"
@@ -18,7 +18,7 @@ const MenuIcon = () => (
     <path
       fill="transparent"
       strokeWidth="2"
-      stroke="rgba(239, 68, 68)"
+      stroke="#0657a2"
       strokeLinecap="butt"
       d="M 20 16.346 L 20 16.346"
     ></path>

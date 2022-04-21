@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <Header />
       <About />
-      {/* <Projects /> */}
+      <Projects />
     </>
   )
 }

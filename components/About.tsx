@@ -4,18 +4,15 @@ import Image from 'next/image'
 const About = () => {
   return (
     <section className="about-section flex flex-col justify-between rounded-t-3xl">
-      <div className="flex flex-col justify-end px-7 py-7 text-white md:w-3/5">
-        <h2 className="pb-7 text-8xl font-bold">
-          About me<span className="text-red-500">.</span>
-        </h2>
+      <div className="flex flex-col justify-end p-7 text-white md:w-3/5">
+        <h2 className="pb-7 text-8xl font-bold">About me</h2>
         <p className="pb-7 text-2xl">
-          I am a full stack developer from Melbourne with a passion for both
-          front and back-end development and the technologies and problem
-          solving they involve. I have a bachelor’s degree in Civil Engineering,
-          however have found a passion in software development. I specialise in
-          building full stack applications using tools such as JavaScript,
-          React, and Node, and am eager to continually expand on my knowledge
-          and develop my skills.
+          I am a full stack developer with a passion for both front and back-end
+          development and the technologies and problem solving they involve. I
+          have a bachelor’s degree in Civil Engineering, however have found a
+          passion in software development. I specialise in building full stack
+          applications using tools such as JavaScript, React, and Node, and am
+          eager to continually expand on my knowledge and develop my skills.
         </p>
         <p className="text-2xl">
           When I’m not studying or working, I love spending time outdoors with
@@ -23,7 +20,7 @@ const About = () => {
           mountain bike.
         </p>
       </div>
-      <div className="flex h-full md:w-2/5">
+      <div className="flex md:w-2/5" style={{ height: '400px' }}>
         <Image src={mtb} alt="mtb" objectFit="cover" objectPosition="right" />
       </div>
     </section>
