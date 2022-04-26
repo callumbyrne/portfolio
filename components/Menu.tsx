@@ -1,6 +1,6 @@
 const Menu = () => {
   return (
-    <nav className="fixed inset-0 z-40 flex flex-col items-center justify-center overflow-hidden bg-black py-40 text-[20vw] font-bold text-white md:hidden">
+    <nav className="fixed top-0 z-40 flex w-full flex-col items-center justify-center overflow-hidden bg-black py-24 text-[20vw] font-bold text-white">
       <div>Home</div>
       <div>About</div>
       <div>Projects</div>

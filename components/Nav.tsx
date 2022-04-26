@@ -9,6 +9,8 @@ import { useState } from 'react'
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  window.onresize = () => setIsOpen(false)
+
   return (
     <>
       <nav
@@ -18,7 +20,11 @@ const Nav = () => {
       >
         <div className="flex md:inline-flex">
           <Link href="/" passHref>
-            <a className={`flex items-center ${isOpen ? 'invert' : null}`}>
+            <a
+              className={`flex items-center md:invert-0 ${
+                isOpen ? 'invert' : null
+              }`}
+            >
               <Image
                 src={logo}
                 alt="logo"
