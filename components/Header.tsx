@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <section className="flex w-full flex-col justify-between">
       <Nav />
-      <div className="flex flex-col px-4 pb-16">
+      <div className="flex flex-col px-5 pb-16">
         <div className="flex flex-col pb-11 text-6xl font-bold lg:w-3/5">
           {/* <h2 className="-mb-3">Callum</h2>
           <h2>Byrne</h2> */}

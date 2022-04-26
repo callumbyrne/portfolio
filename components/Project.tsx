@@ -16,7 +16,7 @@ const Project = () => {
         </div>
 
         <div>
-          <div className="flex flex-col px-4">
+          <div className="flex flex-col px-5">
             <div className="flex flex-row items-center">
               <p className="text-2xl font-bold">Portfolio</p>
               <div className="relative h-6 w-6">

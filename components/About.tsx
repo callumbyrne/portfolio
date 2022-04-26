@@ -4,8 +4,8 @@ import Image from 'next/image'
 const About = () => {
   return (
     <section className="about-section flex flex-col justify-between rounded-t-3xl">
-      <div className="flex flex-col justify-end p-4 text-white md:w-3/5">
-        <h2 className="pb-7 text-8xl font-bold">About me</h2>
+      <div className="flex flex-col justify-end p-5 text-white md:w-3/5">
+        <h2 className="pb-7 pt-6 text-8xl font-bold">About me</h2>
         <p className="pb-7 text-2xl">
           I am a full stack developer with a passion for both front and back-end
           development and the technologies and problem solving they involve. I
