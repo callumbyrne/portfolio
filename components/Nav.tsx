@@ -2,14 +2,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import logo from '../public/logo.png'
 import MenuIcon from './MenuIcon'
-import CloseIcon from './closeIcon'
+import CloseIcon from './CloseIcon'
 import Menu from './Menu'
 import { useState } from 'react'
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  window.onresize = () => setIsOpen(false)
+  if (typeof window !== 'undefined') {
+    window.onresize = () => setIsOpen(false)
+  }
 
   return (
     <>
