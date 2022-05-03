@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard'
 
 const ProjectsSection = ({ projects }: IProps) => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col" id="projects">
       <div className="flex flex-row items-center px-5 pt-12 pb-10">
         <h2 className="flex items-center text-8xl font-bold">Projects</h2>
       </div>

@@ -13,6 +13,8 @@ const Nav = () => {
     window.onresize = () => setIsOpen(false)
   }
 
+  const clickHandler = () => setIsOpen(!isOpen)
+
   return (
     <>
       <nav
@@ -38,7 +40,7 @@ const Nav = () => {
           </Link>
         </div>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+        <button onClick={clickHandler} className="md:hidden">
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
 
@@ -48,7 +50,7 @@ const Nav = () => {
           <h2>Contact</h2>
         </div>
       </nav>
-      <nav>{isOpen ? <Menu /> : null}</nav>
+      <nav>{isOpen ? <Menu clickHandler={clickHandler} /> : null}</nav>
     </>
   )
 }
