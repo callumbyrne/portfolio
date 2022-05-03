@@ -2,7 +2,7 @@ import Image from 'next/image'
 import arrow from '../public/arrow.png'
 import { IProject } from '../typeings'
 
-const Project = ({ project }: IProject) => {
+const ProjectCard = ({ project }: IProject) => {
   const image = project.attributes.images.data[0].attributes.url
 
   return (
@@ -38,4 +38,4 @@ const Project = ({ project }: IProject) => {
   )
 }
 
-export default Project
+export default ProjectCard

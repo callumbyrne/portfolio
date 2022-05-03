@@ -1,7 +1,7 @@
 import About from '../components/About'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Projects from '../components/Projects'
+import ProjectsSection from '../components/ProjectsSection'
 import { fetchAPI } from '../lib/api'
 import { IProps } from '../typeings'
 
@@ -21,7 +21,7 @@ const Home = ({ projects }: IProps) => {
     <>
       <Header />
       <About />
-      <Projects projects={projects} />
+      <ProjectsSection projects={projects} />
       <Footer />
     </>
   )

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 html {
-  //background-color: #f8f8f8;
-  background-color: #fffdf2;
+  background-color: #f8f8f8;
+  //background-color: #fffdf2;
 }
 
 .about-section {
