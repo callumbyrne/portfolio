@@ -35,3 +35,16 @@ export interface IProject {
     }
   }
 }
+
+export interface ISlug {
+  id: string
+  attributes: {
+    slug: string
+  }
+}
+
+export interface Params {
+  params: {
+    slug: string
+  }
+}
