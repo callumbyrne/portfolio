@@ -1,6 +1,6 @@
-import Nav from '../components/Nav'
-import { fetchAPI } from '../lib/api'
-import { IProject, ISlug, Params } from '../typeings'
+import Nav from '../../components/Nav'
+import { fetchAPI } from '../../lib/api'
+import { IProject, ISlug, Params } from '../../typeings'
 
 const Project = ({ project }: IProject) => {
   console.log(project)
