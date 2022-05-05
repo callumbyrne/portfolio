@@ -13,7 +13,7 @@ const Header = () => {
             <br /> a full stack developer based in Melbourne
           </h2>
         </div>
-        <div className="flex flex-col space-y-8 text-2xl md:space-y-24 lg:w-2/5 lg:py-16 lg:px-20">
+        <div className="flex flex-col space-y-8 text-2xl md:space-y-12 lg:w-2/5 lg:py-16 lg:px-20">
           {/* <p className="flex md:justify-end">Melbourne - Australia</p> */}
           <div>
             {/* <p className="flex md:justify-end">Full Stack Developer</p> */}

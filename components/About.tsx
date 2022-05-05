@@ -4,7 +4,7 @@ import Image from 'next/image'
 const About = () => {
   return (
     <section className="about-section flex flex-col justify-between" id="about">
-      <div className="flex flex-col justify-end p-5 text-white md:w-3/5">
+      <div className="flex flex-col justify-end p-5 text-white">
         <h2 className="pb-7 pt-6 text-8xl font-bold">About me</h2>
         <p className="pb-7 text-2xl">
           I am a full stack developer with a passion for both front and back-end
@@ -20,7 +20,7 @@ const About = () => {
           mountain bike.
         </p>
       </div>
-      <div className="flex md:w-2/5" style={{ height: '400px' }}>
+      <div className="flex" style={{ height: '400px' }}>
         <Image
           src={mtb}
           alt="mtb"

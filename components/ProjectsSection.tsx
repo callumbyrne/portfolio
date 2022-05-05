@@ -9,13 +9,17 @@ const ProjectsSection = ({ projects }: IProps) => {
         <h2 className="flex items-center text-8xl font-bold">Projects</h2>
       </div>
 
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <Link
           key={project.attributes.slug}
           href={`/projects/${project.attributes.slug}`}
           passHref
         >
-          <ProjectCard key={project.attributes.title} project={project} />
+          <ProjectCard
+            key={project.attributes.title}
+            project={project}
+            index={index}
+          />
         </Link>
       ))}
     </section>

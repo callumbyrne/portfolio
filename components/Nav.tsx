@@ -45,9 +45,15 @@ const Nav = () => {
         </button>
 
         <div className="hidden space-x-12 font-sans text-3xl font-bold md:inline-flex">
-          <h2>About</h2>
-          <h2>Projects</h2>
-          <h2>Contact</h2>
+          <Link href="/#about" passHref>
+            <a>About</a>
+          </Link>
+          <Link href="/#projects" passHref>
+            <a>Projects</a>
+          </Link>
+          <Link href="/#contact" passHref>
+            <a>Contact</a>
+          </Link>
         </div>
       </nav>
       <nav>{isOpen ? <Menu clickHandler={clickHandler} /> : null}</nav>
