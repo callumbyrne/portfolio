@@ -42,7 +42,9 @@ const ProjectCard = React.forwardRef(
 
             <div className="flex flex-col px-5 md:w-3/4">
               <div className="flex flex-row items-center">
-                <p className="text-2xl font-bold">{project.attributes.title}</p>
+                <p className="text-2xl font-bold lg:text-4xl">
+                  {project.attributes.title}
+                </p>
                 <div className="relative h-6 w-6">
                   <Image
                     src={arrow}
@@ -52,7 +54,7 @@ const ProjectCard = React.forwardRef(
                   />
                 </div>
               </div>
-              <p>{project.attributes.tools}</p>
+              <p className="lg:text-xl">{project.attributes.tools}</p>
             </div>
           </a>
         </div>
