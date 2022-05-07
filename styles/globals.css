@@ -3,15 +3,17 @@
 @tailwind utilities;
 
 html {
-  background-color: #f8f8f8;
+  //background-color: #f8f8f8;
   //background-color: #fffdf2;
   //background-color: #e9e9eb;
+  background-color: #ffffff;
 }
 
 .about-section {
-  background-color: #0657a2;
+  //background-color: #0657a2;
   //background-color: #064a8a;
   //background-color: #053f75;
   //background-color: #000000;
   //background-color: #3e619b;
+  background-color: #f7f8fb;
 }
