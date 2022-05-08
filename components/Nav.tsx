@@ -20,7 +20,7 @@ const Nav = () => {
       <nav
         className={`${
           isOpen ? 'fixed top-0 z-50' : null
-        } my-10 flex w-full items-center justify-between px-5`}
+        } mt-10 mb-5 flex w-full items-center justify-between px-5 lg:mb-8 lg:px-16 xl:px-36`}
       >
         <div className="flex md:inline-flex">
           <Link href="/" passHref>

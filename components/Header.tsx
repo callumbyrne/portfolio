@@ -1,11 +1,13 @@
 import Nav from './Nav'
 import Image from 'next/image'
+import Marquee from './Marquee'
 
 const Header = () => {
   return (
-    <section className="flex w-full flex-col justify-between lg:px-16 xl:px-36">
+    <section className="flex w-full flex-col justify-between">
       <Nav />
-      <div className="flex flex-col px-5 pb-8 lg:flex-row lg:items-end lg:pb-12 lg:pt-36 xl:pt-52">
+      <Marquee />
+      <div className="flex flex-col px-5 py-8 lg:flex-row lg:items-end lg:px-16 lg:pb-12 lg:pt-36 xl:px-36 xl:pt-52">
         <div className="flex flex-col pb-11 text-6xl font-bold lg:pb-0 lg:text-7xl xl:text-8xl">
           <h2>Hello.</h2>
           <h2>

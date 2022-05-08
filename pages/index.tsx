@@ -16,7 +16,6 @@ export async function getStaticProps() {
 }
 
 const Home = ({ projects }: IProps) => {
-  console.log(projects)
   return (
     <>
       <Header />
