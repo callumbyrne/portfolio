@@ -20,7 +20,7 @@ const Nav = () => {
       <nav
         className={`${
           isOpen ? 'fixed top-0 z-50' : null
-        } mt-10 mb-5 flex w-full items-center justify-between px-5 lg:mb-8 lg:px-16 xl:px-36`}
+        } mt-10 mb-5 flex w-full items-center justify-between px-5 lg:mb-10 lg:px-16 xl:px-36`}
       >
         <div className="flex md:inline-flex">
           <Link href="/" passHref>
@@ -44,15 +44,15 @@ const Nav = () => {
           {isOpen ? <CloseIcon /> : <MenuIcon />}
         </button>
 
-        <div className="hidden space-x-12 font-sans text-3xl font-bold md:inline-flex">
+        <div className="hidden space-x-16 font-sans text-3xl font-bold md:inline-flex">
           <Link href="/#about" passHref>
-            <a>About</a>
+            <a className="transition-all hover:text-gray-500">About</a>
           </Link>
           <Link href="/#projects" passHref>
-            <a>Projects</a>
+            <a className="transition-all hover:text-gray-500">Projects</a>
           </Link>
           <Link href="/#contact" passHref>
-            <a>Contact</a>
+            <a className="transition-all hover:text-gray-500">Contact</a>
           </Link>
         </div>
       </nav>

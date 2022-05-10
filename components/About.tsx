@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section className="about-section" id="about">
+    <section className="about-section text-white" id="about">
       <div className="flex flex-col justify-between lg:flex-row lg:pl-16 xl:pl-36">
         <div className="flex flex-col justify-end p-5 lg:w-2/3 xl:pr-36">
-          <h2 className="pb-7 pt-36 text-8xl font-bold">About me</h2>
+          <h2 className="pb-7 pt-20 text-8xl font-bold">About me</h2>
           <p className="pb-7 text-2xl">
             I am a full stack developer with a passion for both front and
             back-end development and the technologies and problem solving they

@@ -16,7 +16,10 @@ const MarqueeSpan = () => {
   return (
     <span>
       {tools.map((tool) => (
-        <span key={tool} className="pr-8 font-IBM font-light">
+        <span
+          key={tool}
+          className="cursor-default pr-8 font-IBM font-light hover:font-bold"
+        >
           {tool}
         </span>
       ))}
@@ -26,8 +29,8 @@ const MarqueeSpan = () => {
 
 const Marquee = () => {
   return (
-    <div className="marquee border-y border-black">
-      <div className="marquee_inner py-1">
+    <div className="marquee border-y border-black bg-white text-black">
+      <div className="marquee_inner py-2">
         <MarqueeSpan />
         <MarqueeSpan />
         <MarqueeSpan />

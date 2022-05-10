@@ -3,19 +3,24 @@
 @tailwind utilities;
 
 html {
-  //background-color: #f8f8f8;
+  background-color: #f8f8f8;
   //background-color: #fffdf2;
   //background-color: #e9e9eb;
-  background-color: #ffffff;
+  //background-color: #ffffff;
+  //background-color: #101010;
 }
 
 .about-section {
   //background-color: #0657a2;
   //background-color: #064a8a;
   //background-color: #053f75;
-  //background-color: #000000;
+  background-color: #000000;
   //background-color: #3e619b;
-  background-color: #f7f8fb;
+  //background-color: #f7f8fb;
+  //background-color: #e1f390;
+  //background-color: #c1e0a9;
+  //background-color: #eeeeee;
+  //background-color: #222222;
 }
 
 .marquee {
@@ -30,7 +35,7 @@ html {
   display: flex;
   position: relative;
   transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .marquee span {

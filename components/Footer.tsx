@@ -4,7 +4,7 @@ import arrow from '../public/arrow.png'
 const Footer = () => {
   return (
     <section
-      className="bg-black px-5 py-20 text-white lg:px-16 xl:px-36"
+      className="bg-black px-5 py-20 text-white lg:px-16 xl:px-36 xl:py-40"
       id="contact"
     >
       <h2 className="jus flex pb-1 text-6xl font-bold md:text-8xl lg:text-9xl">

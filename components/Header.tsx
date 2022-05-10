@@ -4,18 +4,18 @@ import Marquee from './Marquee'
 
 const Header = () => {
   return (
-    <section className="flex w-full flex-col justify-between">
+    <section className="flex w-full flex-col xl:h-[100vh]">
       <Nav />
       <Marquee />
-      <div className="flex flex-col px-5 py-8 lg:flex-row lg:items-end lg:px-16 lg:pb-12 lg:pt-36 xl:px-36 xl:pt-52">
-        <div className="flex flex-col pb-11 text-6xl font-bold lg:pb-0 lg:text-7xl xl:text-8xl">
-          <h2>Hello.</h2>
-          <h2>
+      <div className="flex flex-col justify-center px-5 py-8 md:py-28 lg:flex-row lg:items-center lg:py-40 lg:px-16 xl:h-full xl:px-36 xl:py-0">
+        <div className="flex flex-col rounded-3xl pb-11 text-6xl font-bold lg:text-7xl xl:text-8xl">
+          <h2>Hello!</h2>
+          <h2 className="leading-tight">
             I&apos;m Callum.
-            <br /> a full stack developer based in Melbourne.
+            <br /> A full stack developer based in Melbourne.
           </h2>
         </div>
-        <div className="flex flex-col space-y-8 text-2xl md:space-y-12 xl:text-3xl">
+        <div className="flex flex-col space-y-8 text-2xl md:space-y-12 lg:space-y-24 xl:text-3xl">
           <div>
             <p className="flex justify-end text-right italic leading-loose">
               HTML, CSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS,
