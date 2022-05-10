@@ -1,4 +1,3 @@
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import About from '../components/About'
 import Footer from '../components/Footer'
@@ -27,7 +26,7 @@ const Home = ({ projects }: IProps) => {
   }, [])
 
   return (
-    <AnimateSharedLayout>
+    <>
       {loading ? (
         <Loader />
       ) : (
@@ -38,7 +37,7 @@ const Home = ({ projects }: IProps) => {
           <Footer />
         </>
       )}
-    </AnimateSharedLayout>
+    </>
   )
 }
 

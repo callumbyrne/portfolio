@@ -3,13 +3,28 @@ import Image from 'next/image'
 import Marquee from './Marquee'
 import { motion } from 'framer-motion'
 
+const variants = {
+  initial: {
+    opacity: 0,
+    y: 150,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.6,
+    },
+  },
+}
+
 const Header = () => {
   return (
     <section className="flex w-full flex-col xl:h-[100vh]">
       <Nav />
       <Marquee />
       <div className="flex flex-col justify-center px-5 py-8 md:py-28 lg:flex-row lg:items-center lg:py-40 lg:px-16 xl:h-full xl:px-36 xl:py-0">
-        <div className="flex flex-col rounded-3xl pb-11 text-6xl font-bold lg:text-7xl xl:text-8xl">
+        <div className="flex flex-col rounded-3xl pb-11 text-6xl font-bold leading-tight lg:text-7xl xl:text-8xl">
           <motion.h2
             layout="position"
             layoutId="hello"
@@ -18,18 +33,28 @@ const Header = () => {
           >
             Hello!
           </motion.h2>
-          <h2 className="leading-tight">
-            I&apos;m Callum.
-            <br /> A full stack developer based in Melbourne.
-          </h2>
+          <motion.div
+            variants={variants}
+            initial="initial"
+            animate="animate"
+          >{`I'm Callum.`}</motion.div>
+          <motion.div
+            variants={variants}
+            initial="initial"
+            animate="animate"
+          >{`A full stack developer based in Melbourne.`}</motion.div>
         </div>
-        <div className="flex flex-col space-y-8 text-2xl md:space-y-12 lg:space-y-24 xl:text-3xl">
-          <div>
-            <p className="flex justify-end text-right italic leading-loose">
-              HTML, CSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS,
-              Express, MongoDB, Jest, Cypress
-            </p>
-          </div>
+
+        <motion.div
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          className="flex flex-col space-y-8 text-2xl md:space-y-12 lg:space-y-24 xl:text-3xl"
+        >
+          <p className="flex justify-end text-right italic leading-loose">
+            HTML, CSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS, Express,
+            MongoDB, Jest, Cypress
+          </p>
           <p className="flex justify-end">callumjbyrne97@gmail.com</p>
           <div className="flex flex-row justify-center space-x-20 lg:justify-end">
             <div className="flex items-center">
@@ -61,7 +86,7 @@ const Header = () => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
