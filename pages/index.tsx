@@ -1,6 +1,9 @@
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import About from '../components/About'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Loader from '../components/Loader'
 import ProjectsSection from '../components/ProjectsSection'
 import { fetchAPI } from '../lib/api'
 import { IProps } from '../typeings'
@@ -16,13 +19,26 @@ export async function getStaticProps() {
 }
 
 const Home = ({ projects }: IProps) => {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+  }, [])
+
   return (
-    <>
-      <Header />
-      <About />
-      <ProjectsSection projects={projects} />
-      <Footer />
-    </>
+    <AnimateSharedLayout>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          <About />
+          <ProjectsSection projects={projects} />
+          <Footer />
+        </>
+      )}
+    </AnimateSharedLayout>
   )
 }
 
