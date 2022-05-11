@@ -3,10 +3,19 @@ import Image from 'next/image'
 import Marquee from './Marquee'
 import { motion } from 'framer-motion'
 
-const variants = {
+const headerVariant = {
+  animate: {
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const wordVariant = {
   initial: {
     opacity: 0,
-    y: 150,
+    y: 50,
   },
   animate: {
     opacity: 1,
@@ -16,6 +25,28 @@ const variants = {
       duration: 0.6,
     },
   },
+}
+
+interface IAnimatedWords {
+  text: string
+}
+
+const AnimatedWords = ({ text }: IAnimatedWords) => {
+  const words = text.split(' ')
+
+  return (
+    <motion.div variants={headerVariant} initial="initial" animate="animate">
+      {words.map((word, index) => (
+        <motion.span
+          key={word + index}
+          variants={wordVariant}
+          style={{ display: 'inline-block' }}
+        >
+          {`${word}`}&nbsp;
+        </motion.span>
+      ))}
+    </motion.div>
+  )
 }
 
 const Header = () => {
@@ -34,19 +65,19 @@ const Header = () => {
             Hello!
           </motion.h2>
           <motion.div
-            variants={variants}
+            variants={headerVariant}
             initial="initial"
             animate="animate"
-          >{`I'm Callum.`}</motion.div>
-          <motion.div
-            variants={variants}
-            initial="initial"
-            animate="animate"
-          >{`A full stack developer based in Melbourne.`}</motion.div>
+          >
+            <AnimatedWords text={`I'm Callum.`} />
+            <AnimatedWords
+              text={`A full stack developer based in Melbourne.`}
+            />
+          </motion.div>
         </div>
 
         <motion.div
-          variants={variants}
+          variants={wordVariant}
           initial="initial"
           animate="animate"
           className="flex flex-col space-y-8 text-2xl md:space-y-12 lg:space-y-24 xl:text-3xl"

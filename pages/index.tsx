@@ -22,7 +22,7 @@ const Home = ({ projects }: IProps) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 1000)
   }, [])
 
   return (
