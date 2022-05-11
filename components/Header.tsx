@@ -41,7 +41,7 @@ const AnimatedWords = ({ text }: IAnimatedWords) => {
           key={word + index}
           variants={wordVariant}
           style={{ display: 'inline-block' }}
-          className="leading-tight"
+          className="leading-none"
         >
           {`${word}`}&nbsp;
         </motion.span>
@@ -52,11 +52,11 @@ const AnimatedWords = ({ text }: IAnimatedWords) => {
 
 const Header = () => {
   return (
-    <section className="flex w-full flex-col xl:h-[100vh]">
+    <section className="sticky flex w-full flex-col xl:pb-36">
       <Nav />
       <Marquee />
-      <div className="flex flex-col justify-center px-5 py-8 md:py-28 lg:flex-row lg:items-center lg:py-40 lg:px-16 xl:h-full xl:px-36 xl:py-0">
-        <div className="flex flex-col rounded-3xl pb-11 text-6xl font-bold leading-tight lg:text-7xl xl:text-8xl">
+      <div className="xl:py-30 flex flex-col justify-center px-5 py-8 md:py-12 lg:flex-row lg:items-center lg:px-16 xl:py-16 xl:px-36">
+        <div className="flex flex-col rounded-3xl pb-11 font-Inter text-6xl font-bold leading-none sm:text-7xl lg:text-8xl xl:text-9xl">
           <motion.h2
             layout="position"
             layoutId="hello"
@@ -81,7 +81,7 @@ const Header = () => {
           variants={wordVariant}
           initial="initial"
           animate="animate"
-          className="flex flex-col space-y-8 text-2xl md:space-y-12 lg:space-y-24 xl:text-3xl"
+          className="flex flex-col space-y-8 font-Inter text-2xl font-light md:space-y-12 lg:space-y-24 xl:text-3xl"
         >
           <p className="flex justify-end text-right italic leading-loose">
             HTML, CSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS, Express,

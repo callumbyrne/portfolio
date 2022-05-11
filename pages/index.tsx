@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Loader from '../components/Loader'
 import ProjectsSection from '../components/ProjectsSection'
-import { fetchAPI } from '../lib/api'
+import { fetchAPI } from '../utils/api'
 import { IProps } from '../typeings'
 
 export async function getStaticProps() {

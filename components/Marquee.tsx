@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 const tools = [
   'HTML',
   'CSS',
@@ -12,24 +14,50 @@ const tools = [
   'Cypress',
 ]
 
+const marqueeVariant = {
+  animate: {
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const wordVariant = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.6,
+    },
+  },
+}
+
 const MarqueeSpan = () => {
   return (
-    <span>
+    <motion.span variants={marqueeVariant} initial="initial" animate="animate">
       {tools.map((tool) => (
-        <span
+        <motion.span
           key={tool}
           className="cursor-default pr-8 font-IBM font-light hover:font-bold"
+          variants={wordVariant}
+          style={{ display: 'inline-block' }}
         >
           {tool}
-        </span>
+        </motion.span>
       ))}
-    </span>
+    </motion.span>
   )
 }
 
 const Marquee = () => {
   return (
-    <div className="marquee border-y border-black bg-white text-black">
+    <div className="marquee border-y border-black bg-[#e0e0e0] text-black">
       <div className="marquee_inner py-2">
         <MarqueeSpan />
         <MarqueeSpan />

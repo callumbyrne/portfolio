@@ -66,7 +66,7 @@ const Nav = () => {
         </button>
 
         <motion.div
-          className="hidden space-x-16 font-sans text-3xl font-bold md:inline-flex"
+          className="hidden space-x-16 font-Inter text-3xl font-medium md:inline-flex"
           variants={variant}
           initial="initial"
           animate="animate"

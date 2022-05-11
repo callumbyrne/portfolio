@@ -24,7 +24,7 @@ const Loader = () => {
   return (
     <motion.div className="flex h-[100vh] w-full items-center justify-center">
       <motion.h2
-        className="text-6xl font-bold lg:text-7xl xl:text-8xl"
+        className="font-Inter text-6xl font-bold sm:text-7xl lg:text-8xl xl:text-9xl"
         layoutId="hello"
         variants={variants}
         initial="hidden"

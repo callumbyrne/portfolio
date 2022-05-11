@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import arrow from '../public/arrow.png'
@@ -8,6 +9,36 @@ interface Props {
   href?: string
   project: IProjects
   index: number
+}
+
+const imageVariant = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.6,
+    },
+  },
+}
+
+const textVariant = {
+  initial: {
+    opacity: 0,
+    y: -50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.6,
+    },
+  },
 }
 
 const ProjectCard = React.forwardRef(
@@ -31,16 +62,28 @@ const ProjectCard = React.forwardRef(
             ref={ref}
             className="flex cursor-pointer flex-col items-end"
           >
-            <div className="px-5 pb-3 md:w-3/4">
+            <motion.div
+              className="px-5 pb-3 md:w-3/4"
+              variants={imageVariant}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <Image
                 src={`http://localhost:1337${image}`}
                 alt="project image"
                 width={1080}
                 height={720}
               />
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col px-5 md:w-3/4">
+            <motion.div
+              className="flex flex-col px-5 md:w-3/4"
+              variants={textVariant}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 1 }}
+            >
               <div className="flex flex-row items-center">
                 <p className="text-2xl font-bold lg:text-4xl">
                   {project.attributes.title}
@@ -55,7 +98,7 @@ const ProjectCard = React.forwardRef(
                 </div>
               </div>
               <p className="lg:text-xl">{project.attributes.tools}</p>
-            </div>
+            </motion.div>
           </a>
         </div>
       </>
