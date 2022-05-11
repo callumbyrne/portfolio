@@ -41,6 +41,7 @@ const AnimatedWords = ({ text }: IAnimatedWords) => {
           key={word + index}
           variants={wordVariant}
           style={{ display: 'inline-block' }}
+          className="leading-tight"
         >
           {`${word}`}&nbsp;
         </motion.span>
