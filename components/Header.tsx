@@ -2,6 +2,7 @@ import Nav from './Nav'
 import Image from 'next/image'
 import Marquee from './Marquee'
 import { motion } from 'framer-motion'
+import smiley from '../public/smiley1.png'
 
 const headerVariant = {
   animate: {
@@ -41,7 +42,9 @@ const AnimatedWords = ({ text }: IAnimatedWords) => {
           key={word + index}
           variants={wordVariant}
           style={{ display: 'inline-block' }}
-          className="leading-none"
+          className={`${
+            word === 'Callum.' ? 'underline underline-offset-4' : null
+          } leading-none`}
         >
           {`${word}`}&nbsp;
         </motion.span>
@@ -65,6 +68,14 @@ const Header = () => {
           >
             Hello!
           </motion.h2>
+          <motion.div
+            className="absolute -z-10 hidden w-[100vw] xl:inline-flex xl:-translate-x-36 xl:justify-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2.5 }}
+          >
+            <Image src={smiley} alt="smiley" priority />
+          </motion.div>
           <motion.div
             variants={headerVariant}
             initial="initial"

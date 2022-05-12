@@ -19,11 +19,31 @@ export async function getStaticProps() {
 
 const Home = ({ projects }: IProps) => {
   const [loading, setLoading] = useState(true)
+
+  let hash = ''
+
+  if (typeof window !== 'undefined') {
+    hash = window.location.hash
+  }
+
   useEffect(() => {
+    if (hash !== '') {
+      setLoading(false)
+    }
     setTimeout(() => {
       setLoading(false)
     }, 1000)
-  }, [])
+  }, [hash])
+
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash) {
+      setTimeout(() => {
+        const elm = document.querySelector(hash)
+        elm?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  })
 
   return (
     <>

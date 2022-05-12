@@ -71,7 +71,7 @@ const Nav = () => {
           initial="initial"
           animate="animate"
         >
-          <Link href="/#about" passHref>
+          <Link href="/#about" scroll={false} passHref>
             <a className="transition-all hover:text-gray-500">About</a>
           </Link>
           <Link href="/#projects" passHref>

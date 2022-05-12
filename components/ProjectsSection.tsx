@@ -24,9 +24,9 @@ const ProjectsSection = ({ projects }: IProps) => {
       className="flex flex-col font-Inter lg:px-16 xl:px-36"
       id="projects"
     >
-      <div className="flex flex-row items-center px-5 pt-36 pb-10">
+      <div className="flex flex-row items-center px-5 pt-36 pb-10 lg:underline lg:underline-offset-4">
         <motion.h2
-          className="flex items-center text-8xl font-bold"
+          className="flex items-center text-6xl font-bold sm:text-7xl lg:text-8xl"
           variants={variant}
           initial="initial"
           whileInView="animate"

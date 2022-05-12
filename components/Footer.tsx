@@ -37,7 +37,7 @@ const Footer = () => {
       id="contact"
     >
       <motion.h2
-        className="flex pb-1 text-6xl font-bold md:text-8xl lg:text-9xl"
+        className="flex pb-1 text-6xl font-bold sm:text-7xl md:text-8xl lg:text-9xl"
         variants={mainVariant}
         initial="initial"
         whileInView="animate"
@@ -46,7 +46,7 @@ const Footer = () => {
         CONTACT ME
       </motion.h2>
       <motion.div
-        className="flex flex-row items-center text-3xl underline underline-offset-4 md:text-5xl lg:text-6xl"
+        className="flex flex-row items-center text-xl underline underline-offset-4 sm:text-4xl md:text-5xl lg:text-6xl"
         variants={subVariant}
         initial="initial"
         whileInView="animate"
@@ -54,7 +54,7 @@ const Footer = () => {
       >
         <h3 className="pr-10">EMAIL</h3>
         <h3 className="pr-10">GITHUB</h3>
-        <h3 className="pr-10">LINKEDIN</h3>
+        <h3 className="">LINKEDIN</h3>
       </motion.div>
     </section>
   )

@@ -17,7 +17,24 @@ const variant = {
   },
 }
 
+const mobileVariant = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.6,
+    },
+  },
+}
+
 const About = () => {
+  const isMobile = window.innerWidth < 1024 ? true : false
+
   return (
     <section className="about-section font-Inter" id="about">
       <div className="flex flex-col justify-between lg:flex-row lg:pl-16 xl:pl-36">
@@ -28,13 +45,13 @@ const About = () => {
           <p className="pb-7 text-2xl lg:text-4xl">
             I am a <b>full stack developer</b> with a passion for both front and
             back-end development and the technologies and problem solving they
-            involve. I have a bachelor’s degree in Civil Engineering, however
-            have found a passion in software development. I specialise in
-            building full stack applications using tools such as{' '}
+            involve. I have a bachelor’s degree in <b>Civil Engineering</b>,
+            however have found a passion in software development. I specialise
+            in building full stack applications using tools such as{' '}
             <b>JavaScript</b>, <b>React</b>, and <b>Node</b>, and am eager to
             continually expand on my knowledge and develop my skills.
           </p>
-          <p className="pb-20 text-2xl lg:text-4xl">
+          <p className="text-2xl lg:pb-20 lg:text-4xl">
             When I’m not studying or working, I love spending time outdoors with
             my family and friends or riding down hills as fast as I can on my
             mountain bike.
@@ -42,7 +59,7 @@ const About = () => {
         </div>
         <motion.div
           className="flex h-[400px] lg:h-auto lg:w-2/5 lg:translate-y-36 lg:object-cover lg:pr-10"
-          variants={variant}
+          variants={isMobile ? mobileVariant : variant}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.8 }}

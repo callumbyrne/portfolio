@@ -22,7 +22,6 @@ const variant = {
 }
 
 const Project = ({ project }: IProject) => {
-  console.log(project)
   const image = project.attributes.images.data[0].attributes.url
   return (
     <main>
