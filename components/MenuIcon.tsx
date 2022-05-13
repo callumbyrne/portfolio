@@ -1,27 +1,17 @@
 const MenuIcon = () => (
-  <svg width="23" height="23" viewBox="0 0 23 23">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
     <path
-      fill="transparent"
-      strokeWidth="3"
-      stroke="#0657a2"
-      strokeLinecap="butt"
-      d="M 0 2.5 L 20 2.5"
-    ></path>
-    <path
-      fill="transparent"
-      strokeWidth="3"
-      stroke="#0657a2"
-      strokeLinecap="butt"
-      d="M 10 9.423 L 20 9.423"
-      opacity="1"
-    ></path>
-    <path
-      fill="transparent"
-      strokeWidth="3"
-      stroke="#0657a2"
-      strokeLinecap="butt"
-      d="M 20 16.346 L 20 16.346"
-    ></path>
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4 6h16M4 12h16M4 18h16"
+    />
   </svg>
 )
 
