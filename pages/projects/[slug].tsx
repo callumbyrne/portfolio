@@ -65,7 +65,7 @@ const Project = ({ project }: IProject) => {
 }
 
 export async function getStaticPaths() {
-  const response = await fetchAPI('/api/projects', { fields: ['slug'] })
+  const response = await fetchAPI('/projects', { fields: ['slug'] })
 
   return {
     paths: response.data.map((project: ISlug) => ({

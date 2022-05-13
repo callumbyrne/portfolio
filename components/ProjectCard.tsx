@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import arrow from '../public/arrow.png'
 import { IProjects } from '../typeings'
+import { getStrapiURL } from '../utils/api'
 
 interface Props {
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
@@ -70,7 +71,7 @@ const ProjectCard = React.forwardRef(
               viewport={{ once: true, amount: 0.5 }}
             >
               <Image
-                src={`http://localhost:1337${image}`}
+                src={`${getStrapiURL()}${image}`}
                 alt="project image"
                 width={1080}
                 height={720}

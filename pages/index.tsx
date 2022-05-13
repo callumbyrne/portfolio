@@ -9,7 +9,7 @@ import { IProps } from '../typeings'
 import removeHash from '../utils/removeHash'
 
 export async function getStaticProps() {
-  const response = await fetchAPI('/api/projects', { populate: '*' })
+  const response = await fetchAPI('/projects', { populate: '*' })
 
   return {
     props: {
