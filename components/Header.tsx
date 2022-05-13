@@ -37,18 +37,32 @@ const AnimatedWords = ({ text }: IAnimatedWords) => {
 
   return (
     <motion.div variants={headerVariant} initial="initial" animate="animate">
-      {words.map((word, index) => (
-        <motion.span
-          key={word + index}
-          variants={wordVariant}
-          style={{ display: 'inline-block' }}
-          className={`${
-            word === 'Callum.' ? 'underline underline-offset-4' : null
-          } leading-none`}
-        >
-          {`${word}`}&nbsp;
-        </motion.span>
-      ))}
+      {words.map((word, index) => {
+        if (word === 'Callum.') {
+          return (
+            <motion.span
+              key={word + index}
+              variants={wordVariant}
+              style={{ display: 'inline-block' }}
+              className={'leading-none underline underline-offset-4'}
+            >
+              {`${word}`}
+            </motion.span>
+          )
+        }
+        return (
+          <motion.span
+            key={word + index}
+            variants={wordVariant}
+            style={{ display: 'inline-block' }}
+            className={`${
+              word === 'Callum.' ? 'underline underline-offset-4' : null
+            } leading-none`}
+          >
+            {`${word}`}&nbsp;
+          </motion.span>
+        )
+      })}
     </motion.div>
   )
 }
@@ -68,14 +82,18 @@ const Header = () => {
           >
             Hello!
           </motion.h2>
-          <motion.div
-            className="absolute -z-10 hidden w-[100vw] xl:inline-flex xl:-translate-x-36 xl:justify-center"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2.5 }}
-          >
-            <Image src={smiley} alt="smiley" priority />
-          </motion.div>
+
+          <div className="absolute -z-10 flex w-full -translate-x-10 justify-end sm:-translate-x-16 lg:relative lg:-translate-y-20 lg:translate-x-5 xl:-translate-y-28 xl:translate-x-8">
+            <motion.div
+              className="absolute inline-flex h-[150px] w-[150px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] xl:h-[300px] xl:w-[300px] 2xl:h-[400px] 2xl:w-[400px]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2.5 }}
+            >
+              <Image src={smiley} alt="smiley" priority />
+            </motion.div>
+          </div>
+
           <motion.div
             variants={headerVariant}
             initial="initial"
