@@ -24,9 +24,9 @@ const variant = {
 const Project = ({ project }: IProject) => {
   const image = project.attributes.images.data[0].attributes.url
   return (
-    <main>
+    <main className="font-Inter">
       <Nav />
-      <div className="px-5 py-20 lg:px-16 xl:px-36">
+      <div className="px-5 py-20 lg:px-16 xl:px-36 ">
         <motion.h1
           className="pb-5 text-7xl font-bold"
           variants={variant}
@@ -51,9 +51,13 @@ const Project = ({ project }: IProject) => {
             />
           </motion.div>
         </span>
-        <div className="mb-3 w-14 border border-black"></div>
-        <h2 className="text-2xl font-bold">Overview</h2>
-        <ReactMarkdown>{project.attributes.content}</ReactMarkdown>
+        <div className="m-auto max-w-7xl text-xl">
+          <div className="mb-3 w-14 border border-black"></div>
+          <h2 className="pb-5 text-2xl font-bold">Overview</h2>
+          <div>
+            <ReactMarkdown>{project.attributes.content}</ReactMarkdown>
+          </div>
+        </div>
       </div>
       <Footer />
     </main>
