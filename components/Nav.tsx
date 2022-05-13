@@ -6,6 +6,7 @@ import CloseIcon from './CloseIcon'
 import Menu from './Menu'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import removeHash from '../utils/removeHash'
 
 const variant = {
   initial: {
@@ -72,13 +73,28 @@ const Nav = () => {
           animate="animate"
         >
           <Link href="/#about" scroll={false} passHref>
-            <a className="transition-all hover:text-gray-500">About</a>
+            <a
+              className="transition-all hover:text-gray-500"
+              onClick={() => removeHash()}
+            >
+              About
+            </a>
           </Link>
           <Link href="/#projects" passHref>
-            <a className="transition-all hover:text-gray-500">Projects</a>
+            <a
+              className="transition-all hover:text-gray-500"
+              onClick={() => removeHash()}
+            >
+              Projects
+            </a>
           </Link>
           <Link href="/#contact" passHref>
-            <a className="transition-all hover:text-gray-500">Contact</a>
+            <a
+              className="transition-all hover:text-gray-500"
+              onClick={() => removeHash()}
+            >
+              Contact
+            </a>
           </Link>
         </motion.div>
       </nav>
