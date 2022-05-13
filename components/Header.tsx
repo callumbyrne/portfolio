@@ -2,7 +2,7 @@ import Nav from './Nav'
 import Image from 'next/image'
 import Marquee from './Marquee'
 import { motion } from 'framer-motion'
-import smiley from '../public/smiley1.png'
+import smiley from '../public/smiley.png'
 
 const headerVariant = {
   animate: {
