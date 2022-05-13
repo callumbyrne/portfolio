@@ -3,7 +3,7 @@ import qs from 'qs'
 export function getStrapiURL(path = '') {
   return `${
     process.env.NEXT_PUBLIC_STRAPI_API_URL ||
-    'https://cryptic-reef-57722.herokuapp.com/'
+    'https://cryptic-reef-57722.herokuapp.com'
   }${path}`
 }
 

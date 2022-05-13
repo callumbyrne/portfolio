@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Footer from '../../components/Footer'
 import ReactMarkdown from 'react-markdown'
 import { motion } from 'framer-motion'
+import { getStrapiURL } from '../../utils/api'
 
 const variant = {
   initial: {
@@ -44,7 +45,7 @@ const Project = ({ project }: IProject) => {
             animate="animate"
           >
             <Image
-              src={`http://localhost:1337${image}`}
+              src={`${getStrapiURL()}${image}`}
               alt="project image"
               width={2000}
               height={1333}
