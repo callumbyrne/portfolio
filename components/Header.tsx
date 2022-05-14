@@ -69,7 +69,7 @@ const AnimatedWords = ({ text }: IAnimatedWords) => {
 
 const Header = () => {
   return (
-    <section className="sticky flex w-full flex-col xl:pb-36">
+    <section className="relative z-20 flex w-full flex-col xl:pb-36">
       <Nav />
       <Marquee />
       <div className="xl:py-30 flex flex-col justify-center px-5 py-8 md:py-12 lg:flex-row lg:items-center lg:px-16 xl:py-16 xl:px-36">

@@ -26,11 +26,20 @@ const variant = {
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  // if (typeof window !== 'undefined') {
+  //   window.onresize = () => setIsOpen(false)
+  // }
+
   const clickHandler = () => setIsOpen(!isOpen)
 
   return (
     <>
-      <nav className="z-50 my-5 flex w-full items-center justify-between px-5 lg:my-10 lg:px-16 xl:px-36">
+      <nav
+        className={`${
+          isOpen ? 'fixed' : null
+        } z-50 my-5 flex w-full items-center justify-between px-5 md:static lg:my-10 lg:px-16 xl:px-36`}
+      >
+        {/* <nav className="z-50 my-5 flex w-full items-center justify-between px-5 lg:my-10 lg:px-16 xl:px-36"> */}
         <motion.div
           className="flex md:inline-flex"
           variants={variant}
@@ -38,18 +47,13 @@ const Nav = () => {
           animate="animate"
         >
           <Link href="/" passHref>
-            <a
+            <div
               className={`flex items-center pt-1 md:invert-0 ${
                 isOpen ? 'invert' : null
               }`}
             >
-              <Image
-                src={logo}
-                alt="logo"
-                objectFit="scale-down"
-                objectPosition={'left'}
-              />
-            </a>
+              <Image src={logo} alt="logo" width={210} height={36} />
+            </div>
           </Link>
         </motion.div>
 

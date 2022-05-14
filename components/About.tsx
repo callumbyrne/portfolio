@@ -58,7 +58,7 @@ const About = () => {
           </p>
         </div>
         <motion.div
-          className="flex h-[400px] lg:h-auto lg:w-2/5 lg:translate-y-36 lg:object-cover lg:pr-10"
+          className="relative z-0 flex h-[400px] lg:h-auto lg:w-2/5 lg:translate-y-36 lg:object-cover lg:pr-10"
           variants={isMobile ? mobileVariant : variant}
           initial="initial"
           whileInView="animate"
