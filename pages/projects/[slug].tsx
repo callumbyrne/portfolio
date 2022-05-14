@@ -5,8 +5,7 @@ import Image from 'next/image'
 import Footer from '../../components/Footer'
 import ReactMarkdown from 'react-markdown'
 import { motion } from 'framer-motion'
-import { getStrapiURL } from '../../utils/api'
-
+import { getStrapiMedia } from '../../utils/media'
 const variant = {
   initial: {
     y: 50,
@@ -23,7 +22,7 @@ const variant = {
 }
 
 const Project = ({ project }: IProject) => {
-  const image = project.attributes.images.data[0].attributes.url
+  const image = project.attributes.images.data[0]
   return (
     <main className="font-Inter">
       <Nav />
@@ -45,7 +44,7 @@ const Project = ({ project }: IProject) => {
             animate="animate"
           >
             <Image
-              src={`${getStrapiURL()}${image}`}
+              src={`${getStrapiMedia(image)}`}
               alt="project image"
               width={2000}
               height={1333}

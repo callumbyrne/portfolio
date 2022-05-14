@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import arrow from '../public/arrow.png'
 import { IProjects } from '../typeings'
-import { getStrapiURL } from '../utils/api'
+import { getStrapiMedia } from '../utils/media'
 
 interface Props {
   onClick?: React.MouseEventHandler<HTMLAnchorElement>
@@ -47,7 +47,7 @@ const ProjectCard = React.forwardRef(
     { onClick, href, project, index }: Props,
     ref: React.LegacyRef<HTMLAnchorElement>
   ) => {
-    const image = project.attributes.images.data[0].attributes.url
+    const image = project.attributes.images.data[0]
     const alignment = index % 2
 
     return (
@@ -71,7 +71,7 @@ const ProjectCard = React.forwardRef(
               viewport={{ once: true, amount: 0.5 }}
             >
               <Image
-                src={`${getStrapiURL()}${image}`}
+                src={`${getStrapiMedia(image)}`}
                 alt="project image"
                 width={1080}
                 height={720}
