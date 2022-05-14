@@ -6,6 +6,7 @@ module.exports = {
       'localhost',
       'cdn.jsdelivr.net',
       'cryptic-reef-57722.herokuapp.com',
+      'res.cloudinary.com',
     ],
   },
 }
