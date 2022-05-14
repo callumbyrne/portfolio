@@ -48,11 +48,11 @@ const Nav = () => {
         >
           <Link href="/" passHref>
             <div
-              className={`flex items-center pt-1 md:invert-0 ${
+              className={`flex w-52 items-center pt-1 md:invert-0 ${
                 isOpen ? 'invert' : null
               }`}
             >
-              <Image src={logo} alt="logo" width={210} height={36} />
+              <Image src={logo} alt="logo" width={394} height={68} />
             </div>
           </Link>
         </motion.div>
