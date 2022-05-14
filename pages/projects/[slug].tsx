@@ -26,7 +26,7 @@ const Project = ({ project }: IProject) => {
   return (
     <main className="font-Inter">
       <Nav />
-      <div className="px-5 py-20 lg:px-16 xl:px-36 ">
+      <div className="px-5 pt-10 pb-32 lg:px-16 xl:px-36">
         <motion.h1
           className="pb-5 text-7xl font-bold"
           variants={variant}
