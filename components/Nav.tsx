@@ -30,7 +30,10 @@ const Nav = () => {
   //   window.onresize = () => setIsOpen(false)
   // }
 
-  const clickHandler = () => setIsOpen(!isOpen)
+  const clickHandler = () => {
+    setIsOpen(!isOpen)
+    removeHash()
+  }
 
   return (
     <>
