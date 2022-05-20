@@ -6,6 +6,7 @@ import Footer from '../../components/Footer'
 import ReactMarkdown from 'react-markdown'
 import { motion } from 'framer-motion'
 import { getStrapiMedia } from '../../utils/media'
+
 const variant = {
   initial: {
     y: 50,
@@ -89,6 +90,7 @@ export async function getStaticProps({ params }: Params) {
     props: {
       project: response.data[0],
     },
+    revalidate: 60,
   }
 }
 
