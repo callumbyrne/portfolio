@@ -5,7 +5,7 @@ const removeHash = () => {
       document.title,
       location.pathname + location.search
     )
-  }, 1000)
+  }, 100)
 }
 
 export default removeHash
