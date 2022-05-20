@@ -7,7 +7,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Callum Byrne</title>
-        <meta property="og:image" content="../public/preview.png" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dlczh9yrb/image/upload/v1653028075/Portfolio/portfolio-screenshot-resized_w5oivq.png"
+        />
 
         <meta property="og:title" content="Callum Byrne" />
 
