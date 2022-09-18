@@ -113,8 +113,8 @@ const Header = () => {
           className="flex flex-col space-y-8 font-Inter text-2xl font-light md:space-y-12 lg:space-y-24 xl:text-3xl"
         >
           <p className="flex justify-end text-right italic leading-loose">
-            HTML, CSS, JavaScript, TypeScript, ReactJS, NextJS, NodeJS, Express,
-            MongoDB, Jest, Cypress
+            JavaScript, TypeScript, ReactJS, NextJS, NodeJS, Express, MongoDB,
+            Jest
           </p>
           <p className="flex justify-end">callumjbyrne97@gmail.com</p>
           <div className="flex flex-row justify-center space-x-20 lg:justify-end">

@@ -48,7 +48,7 @@ const About = () => {
             involve. I have a bachelor’s degree in <b>Civil Engineering</b>,
             however have found a passion in software development. I specialise
             in building full stack applications using tools such as{' '}
-            <b>JavaScript</b>, <b>React</b>, and <b>Node</b>, and am eager to
+            <b>TypeScript</b>, <b>React</b>, and <b>Node</b>, and am eager to
             continually expand on my knowledge and develop my skills.
           </p>
           <p className="text-2xl lg:pb-20 lg:text-4xl">
@@ -62,7 +62,7 @@ const About = () => {
           variants={isMobile ? mobileVariant : variant}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <Image
             src={mtb}
