@@ -20,7 +20,6 @@ export async function getStaticProps() {
 
 const Home = ({ projects }: IProps) => {
   const [loading, setLoading] = useState(true)
-
   useEffect(() => {
     const hash = window.location.hash
     if (hash) {

@@ -1,7 +1,8 @@
 export interface IProjects {
-  id: string
+  id: number
   attributes: {
     title: string
+    order: string
     content: string
     tools: string
     slug: string
@@ -26,6 +27,7 @@ export interface IProject {
     id: string
     attributes: {
       title: string
+      order: string
       content: string
       tools: string
       slug: string

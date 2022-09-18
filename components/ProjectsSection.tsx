@@ -19,6 +19,10 @@ const variant = {
 }
 
 const ProjectsSection = ({ projects }: IProps) => {
+  const orderedProjects = projects.sort(
+    (a, b) => Number(a.attributes.order) - Number(b.attributes.order)
+  )
+
   return (
     <section
       className="flex flex-col font-Inter lg:px-16 xl:px-36"
@@ -36,7 +40,7 @@ const ProjectsSection = ({ projects }: IProps) => {
         </motion.h2>
       </div>
 
-      {projects.map((project, index) => (
+      {orderedProjects.map((project, index) => (
         <Link
           key={project.attributes.slug}
           href={`/projects/${project.attributes.slug}`}
