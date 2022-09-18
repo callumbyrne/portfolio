@@ -54,21 +54,23 @@ const ProjectCard = React.forwardRef(
       <>
         <div
           className={`flex flex-col pb-24 ${
-            alignment === 0 ? 'items-end' : null
+            alignment === 0 ? 'items-end' : 'items-start'
           }`}
         >
           <a
             href={href}
             onClick={onClick}
             ref={ref}
-            className="flex cursor-pointer flex-col items-end"
+            className={`flex cursor-pointer flex-col ${
+              alignment === 0 ? 'items-end' : 'items-start'
+            }`}
           >
             <motion.div
               className="px-5 pb-3 md:w-3/4"
               variants={imageVariant}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <Image
                 src={`${getStrapiMedia(image)}`}
