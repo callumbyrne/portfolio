@@ -51,7 +51,7 @@ const Nav = () => {
         >
           <Link href="/" passHref>
             <div
-              className={`flex w-52 items-center pt-1 md:invert-0 ${
+              className={`flex w-52 cursor-pointer items-center pt-1 md:invert-0 ${
                 isOpen ? 'invert' : null
               }`}
             >
