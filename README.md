@@ -1,23 +1,9 @@
-# Next.js + Tailwind CSS Example
+Link to site: https://callumbyrne.com/
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+The website is built using modern technologies NextJS, TypeScript and TailwindCSS. NextJS is a React framework that provides functionalities such as server-side rendering and static-site generation. I decided to use NextJS as I have been working a lot with React recently and have heard the benefits NextJS provides. This project was the first time I properly used NextJS, TypeScript and TailwindCSS in a project and so was a massive learning opportunity for me. The development experience using these technologies was great and I will continue to use them for future projects. Making the change from JavaScript to TypeScript has been a challenge, however I believe the benefits TypeScript provides are worth the effort.
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+I didn't have to use a CMS for this project, but I really wanted to try out Strapi and implement it with Next. I also wanted to use some of Next's features such as getStaticProps and getStaticPaths which I was able to do using Strapi rather than just hard coding everything. I deployed the Strapi server to Heroku which was a bit of a challenge at first to get properly configured. Everything was working except the images which I discovered I had to host separately using a Cloudinary plugin with Strapi.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Overall, this was a great learning experience using all these technologies together and fixing all the bugs along the way.
